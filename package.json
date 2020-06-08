@@ -1,0 +1,23 @@
+{
+  "name": "bulk-certifier",
+  "version": "1.0.0",
+  "description": "A simple JS-based utility to generate edited certificates in bulk",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "certify",
+    "certificate",
+    "nodejs",
+    "bulk",
+    "excel",
+    "hackathon",
+    "event"
+  ],
+  "author": "Harshit Budhraja",
+  "license": "ISC",
+  "dependencies": {
+    "@pdf-lib/fontkit": "1.0.0",
+    "pdf-lib": "1.7.0"
+  }
+}
