@@ -1,18 +1,14 @@
+global.processed = [];
+const { exportJSON } = require('./utilities');
 const ParticipantsBulkExporter = require('./participants');
 
-const participants = [
-    { id: 1, name: "Harshit Budhraja" },
-    { id: 2, name: "Himanshu Nikhare" },
-    { id: 3, name: "Sanya Kapoor" },
-    { id: 4, name: "Kaustubh Kishore" }
-];
-
 const App = async () => {
-    await ParticipantsBulkExporter(participants);
+    await ParticipantsBulkExporter();
 };
 
-App().then(() => {
-    console.log('Done');
+App().then(async () => {
+    await exportJSON(global.processed, './assets/log.xlsx');
+    console.log(`Successfully exported log file to './assets/log.xlsx'`);
 }).catch(error => {
     console.log(error);
 });
