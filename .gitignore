@@ -104,5 +104,9 @@ dist
 .tern-port
 
 # Custom ignores
-assets/
+assets/production/
+assets/dev/certificates/
+assets/dev/*.xlsx
+assets/dev/*.numbers
+assets/locals/
 .DS_Store

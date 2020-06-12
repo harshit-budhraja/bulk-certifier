@@ -7,8 +7,9 @@ const App = async () => {
 };
 
 App().then(async () => {
-    await exportJSON(global.processed, './assets/log.xlsx');
-    console.log(`Successfully exported log file to './assets/log.xlsx'`);
+    const logOutPath = `./assets/${process.env.NODE_ENV}/log.xlsx`;
+    await exportJSON(global.processed, logOutPath);
+    console.log(`Successfully exported log file to ${logOutPath}`);
 }).catch(error => {
     console.log(error);
 });

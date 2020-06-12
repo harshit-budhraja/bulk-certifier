@@ -1,4 +1,4 @@
-const fs = require('fs');
+const fs = require('fs-extra');
 const csv = require('neat-csv');
 const json2xls = require('json2xls');
 
@@ -10,6 +10,8 @@ const readFile = (path, opts = null) => new Promise((resolve, reject) => {
 });
 
 const writeFile = (path, data, opts = null) => new Promise((resolve, reject) => {
+    const dir = path.split( '/' ).slice( 0, -1 ).join( '/' );
+    fs.ensureDirSync(dir);
     fs.writeFile(path, data, opts, (error) => {
         if (error) reject(error);
         else resolve();
