@@ -28,9 +28,9 @@ To build this project locally, you should have the following dependencies instal
 
 1. Create a folder `production` inside the `assets` folder and copy the necessary files in it. By default, this folder is added to `.gitignore` so it won't be committed to git.
 
-2. List of files required:
-2.1 Font files at `production/fonts/`
-2.2 Template files at `production/templates/<CERT_TYPE>.pdf`
+2. List of files required:<br>
+2.1 Font files at `production/fonts/`<br>
+2.2 Template files at `production/templates/<CERT_TYPE>.pdf`<br>
 2.3 Input CSV file at `production/all.csv`. (You can find a sample at `dev/all.csv`)
 
 3. Set your `NODE_ENV`: `export NODE_ENV=production`
